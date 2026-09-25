@@ -178,7 +178,7 @@
                             <input type="number" id="txn-amount" step="0.01" required class="w-full px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white">
                         </div>
                         <div>
-                            <label class="block text-xs text-slate-400 mb-1">UPI ID</label>
+                            <label class="block text-xs text-slate-400 mb-1">Descripton</label>
                             <input type="text" id="txn-upi" required class="w-full px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white">
                         </div>
                         <div>
@@ -238,7 +238,7 @@
         const API_URL = 'https://aggo-backend.onrender.com/api';
 
         let transactions = [];
-        let passwords = { dashboard: '2026', control: '22112008' };
+        let passwords = { dashboard: '', control: '' };
         let dashShowAll = false;
 
         window.addEventListener('DOMContentLoaded', () => {
@@ -385,7 +385,7 @@
                 transactor: document.getElementById('transactor-name').value,
                 category: document.getElementById('txn-category').value,
                 amount: parseFloat(document.getElementById('txn-amount').value),
-                description: document.getElementById('txn-upi').value,
+                description: document.getElementById('txn-description').value,
                 date: document.getElementById('txn-date').value,
                 time: document.getElementById('txn-time').value
             };
